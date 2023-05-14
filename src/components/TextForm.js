@@ -15,6 +15,9 @@ export default function TextForm(props) {
     const handleOnChange=(event)=>{
         setText(event.target.value);
     }
+    const handleSpCharClick=()=>{
+        setText(text);
+    }
     const [text,setText]=useState("");
     return (
     <>
@@ -22,12 +25,13 @@ export default function TextForm(props) {
         <label htmlFor="myBox" className="form-label">{props.heading}</label>
         <textarea className="form-control" value={text} id="myBox" rows="10" onChange={handleOnChange}></textarea>
     </div>
-    <button type="button" class="btn btn-primary" onClick={handleUpClick}>Uppercase</button>
-    <button type="button" class="btn btn-primary m-2" onClick={handleLoClick}>Lowercase</button>
-    <button type="button" class="btn btn-primary " onClick={handleTrClick}>Trim</button>
-    <button type="button" class="btn btn-primary m-2" onClick={handleTrClick}>Trim</button>
+    <button type="button" className="btn btn-primary" onClick={handleUpClick}>Uppercase</button>
+    <button type="button" className="btn btn-primary m-2" onClick={handleLoClick}>Lowercase</button>
+    <button type="button" className="btn btn-primary " onClick={handleTrClick}>Trim</button>
+    <button type="button" className="btn btn-primary m-2" onClick={handleTrClick}>Trim</button>
+    <button type="button" className="btn btn-primary " onClick={handleSpCharClick}>Trim</button>
     </>
-  )
+  ) 
 }
 
 TextForm.propTypes={
