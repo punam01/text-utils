@@ -47,6 +47,7 @@ export default function TextForm(props) {
     const [text,setText]=useState("");
     return (
     <>
+    <div className="container">
     <div className="mb-3">
         <label htmlFor="myBox" className="form-label">{props.heading}</label>
         <textarea className="form-control" value={text} id="myBox" rows="10" onChange={handleOnChange}></textarea>
@@ -63,6 +64,7 @@ export default function TextForm(props) {
     <p>{0.008 * text.split(" ").length} minutes read</p>
     <h2 className='my-3'>Preview</h2>
     <p className='text-start container p-4 border' >{text}</p>
+    </div>
     </>
   ) 
 }
