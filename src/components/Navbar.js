@@ -20,7 +20,7 @@ export default function Navbar(props) {
           </ul>
           <form className="d-flex" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button className="btn btn-outline-success" type="submit">Search</button>
+            <button className="btn btn-primary" type="submit">Search</button>
           </form>
         </div>
       </div>
@@ -33,6 +33,6 @@ Navbar.propTypes={
     aboutText:PropTypes.string.isRequired
 }
 Navbar.defaultProps={
-    title:'Title here',
-    aboutText:'About text here'
+    title:'TextTool',
+    aboutText:'About'
 }
